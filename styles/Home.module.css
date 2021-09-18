@@ -11,6 +11,7 @@
   grid-template-areas:
     "nav nav nav"
     "main main main";
+  /* row-gap: 1rem; */
 }
 
 .main {
@@ -19,7 +20,7 @@
   grid-template-columns: 1fr 5fr 1fr;
   /* grid-template-rows: 1fr; */
   grid-template-areas: ". content .";
-  padding: 1rem;
+  /* padding: 1rem; */
   background: var(--color-dark);
 }
 
@@ -38,17 +39,60 @@
   }
 }
 
-
-
 .content {
   color: var(--color-font);
   grid-area: content;
   background-color: var(--color-light);
   border-radius: 5px;
   padding: 1rem;
+  padding-top: 0;
+  margin-top: 1rem;
 }
 
 .nav {
   grid-area: nav;
   background: var(--color-red);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-areas: ". logo links .";
+  align-items: center;
+}
+
+.icon {
+  grid-area: logo;
+  height: 1.5rem;
+  align-items: center;
+}
+
+.nav ul {
+  grid-area: links;
+  display: flex;
+  list-style: none;
+  color: var(--color-font);
+  justify-content: end;
+}
+
+.nav li {
+  padding-right: 1rem;
+}
+
+.nav a {
+  position: relative;
+}
+
+.nav a:after {
+  content: "";
+  display: block;
+  background: var(--color-font);
+  opacity: 0;
+  height: 2px;
+  transition: opacity 750ms ease-in-out;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+}
+
+.nav a:hover::after {
+  opacity: 1;
 }
