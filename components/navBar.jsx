@@ -5,7 +5,6 @@ export default function NavBar() {
         { text: "Home", value: "#" },
         { text: "Blog", value: "#" },
         { text: "About", value: "#" },
-        // eslint-disable-next-line react/jsx-key
     ].map((l, ix) => <li key={ix}><a href={l.value}>{l.text}</a></li>)
 
     return <nav className={"nav"}>
