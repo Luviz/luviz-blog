@@ -4,6 +4,8 @@
   --color-cyan: #033;
   --color-light: hsl(0, 0%, 33%);
   --color-font: hsl(0, 0%, 100%);
+
+  --grid-size-nav-bar: 3rem;
 }
 
 html,
@@ -39,7 +41,7 @@ a {
 .container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 3rem auto;
+  grid-template-rows: var(--grid-size-nav-bar) auto;
   grid-template-areas:
     "nav nav nav"
     "main main main";
@@ -71,66 +73,11 @@ section *:first-child {
   margin-top: 0;
 }
 
-.banner-icon {
-  grid-area: logo;
-  height: 1.5rem;
-  align-items: center;
-  transition: transform 500ms ease-in-out;
-  fill: var(--color-cyan);
-}
-
-.banner-icon:hover {
-  transform: rotate(15deg);
-}
-
-nav {
-  grid-area: nav;
-  background: var(--color-red);
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-areas: ". logo links .";
-  align-items: center;
-}
-
-nav ul {
-  grid-area: links;
-  display: flex;
-  list-style: none;
-  color: var(--color-font);
-  justify-content: flex-end;
-}
-
-nav li {
-  padding-left: 1rem;
-}
-
-nav a {
-  position: relative;
-}
-
-nav a:after {
-  content: "";
-  display: block;
-  background: var(--color-font);
-  opacity: 0;
-  height: 3px;
-  border-radius: 2px 2px 0 0;
-  transition: opacity 750ms ease-in-out;
-  position: absolute;
-  bottom: -0.6rem;
-  left: -5px;
-  right: -5px;
-}
-
-nav a:hover::after {
-  opacity: 1;
-}
-
 @media only screen and (max-width: 700px) {
   .container {
     display: grid;
-    grid-template-columns: 3rem auto;
-    grid-template-rows: 3rem auto;
+    grid-template-columns: var(--grid-size-nav-bar) auto;
+    grid-template-rows: var(--grid-size-nav-bar) auto;
     grid-template-areas:
       "nav main main"
       "nav main main";
