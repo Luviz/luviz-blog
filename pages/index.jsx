@@ -1,13 +1,14 @@
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import MyApp from './_app'
 import styles from '../styles/Home.module.css'
-import { NavBar } from "./components"
+import NavBar from "../components/navBar"
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <NavBar />
+      <NavBar text="hello" />
       <main className={styles.main}>
         <div className={styles.content}>
           <h2>hello world</h2>
