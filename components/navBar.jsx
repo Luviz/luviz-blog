@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from '../styles/Home.module.css'
 
-export default function NavBar({ text }) {
+export default function NavBar() {
     const li = [
         { text: "Home", value: "#" },
         { text: "Blog", value: "#" },
@@ -9,8 +8,8 @@ export default function NavBar({ text }) {
         // eslint-disable-next-line react/jsx-key
     ].map((l, ix) => <li key={ix}><a href={l.value}>{l.text}</a></li>)
 
-    return <nav className={styles.nav}>
-        <img src="/Icon-BJ.svg" alt="Bardia Jedi Logo" className={styles.icon} />
+    return <nav className={"nav"}>
+        <img src="/Icon-BJ.svg" alt="Bardia Jedi Logo" className={"banner-icon"} />
         <ul>
             {li}
         </ul>
