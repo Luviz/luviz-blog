@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
 :root {
   --color-red: hsl(0, 100%, 15%);
   --color-dark: #000;
@@ -89,5 +91,11 @@ section *:first-child {
   section {
     margin: 0.5rem;
     padding: 0.5rem;
+    max-width: 88vw;
   }
+}
+
+pre > code {
+  font-family: "cascadia code", "Sans Mono", "Consolas", "Courier", monospace;
+  font-size: 14px;
 }
