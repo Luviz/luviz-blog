@@ -34,7 +34,7 @@
     border-radius: 2px 2px 0 0;
     transition: opacity 750ms ease-in-out;
     position: absolute;
-    bottom: -0.6rem;
+    bottom: -0.8rem;
     left: -5px;
     right: -5px;
 }
@@ -113,10 +113,17 @@
         border: 2px solid var(--color-font);
         border-radius: 5px;
         text-align: center;
-        width: 100%;
+        width: 6.5rem;
         margin: 0.5rem;
         opacity: 0;
         transition: opacity 150ms ease-in-out;
+        /* transition: all 150ms ease-in-out; */
+    }
+
+    .nav li:hover {
+        background-color: var(--color-font);
+        color: var(--color-red);
+        font-weight: 700;
     }
 
     .nav a::after {
