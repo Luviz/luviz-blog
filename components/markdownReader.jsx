@@ -30,8 +30,7 @@ export default function MarkdownReader({ url, title = "" }) {
             const xml = marked(src)
             setContent(xml)
         })
-    }
-        , [url])
+    }, [url])
 
 
     return <section >
