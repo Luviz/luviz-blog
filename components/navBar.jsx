@@ -4,9 +4,9 @@ import Link from "next/link"
 
 export default function NavBar() {
     const li = [
-        { text: "Home", value: "#" },
-        { text: "Blog", value: "#Blog" },
-        { text: "About", value: "#About" },
+        { text: "Home", value: "/" },
+        { text: "Blog", value: "/blog" },
+        { text: "About", value: "/About" },
     ].map((l, ix) => <li key={ix}><Link href={l.value} passHref>{l.text}</Link></li>)
 
     return <nav className={styles.nav}>

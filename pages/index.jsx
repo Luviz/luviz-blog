@@ -6,7 +6,6 @@ import MarkdownReader from '../components/markdownReader'
 export default function Home() {
   return (
     <Master>
-      <MarkdownReader url="/md/test.md" />
       <section>
         <h2>Frist</h2>
         <h3>Sub-section</h3>
