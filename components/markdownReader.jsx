@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 const marked = require('marked');
 import Head from "next/head";
+import styles from "../styles/markdownReader.module.css";
 import Script from "next/script";
 
 export default function MarkdownReader({ url, title = "" }) {
@@ -33,7 +34,7 @@ export default function MarkdownReader({ url, title = "" }) {
     }, [url])
 
 
-    return <section >
+    return <section className={styles.container}>
         <Head>
             <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/vs2015.min.css" />
         </Head>
