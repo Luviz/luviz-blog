@@ -9,7 +9,7 @@ export default function Master({ children }) {
             <meta name="description" content="The blog of Bardia Jedi Software developer" />
             <html lang={"en"} />
         </Head>
-        <NavBar text="hello" />
+        <NavBar />
         <main className={"main"}>
             {children}
         </main >

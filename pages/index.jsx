@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import MyApp from './_app'
 import Master from '../components/master'
-import MarkdownReader from '../components/markdownReader'
 
 export default function Home() {
   return (

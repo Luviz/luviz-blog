@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 // import "../styles/blogcard.module.css"
 import styles from '../styles/blogcard.module.css'
-import Image from 'next/image'
-
 
 export default function BlogCard({ href, title, description, thumbnail, metadata }) {
     return <div className={styles.card} onClick={_ => window.open(href)}>

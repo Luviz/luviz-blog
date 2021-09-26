@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 const marked = require('marked');
 import Head from "next/head";
 import styles from "../styles/markdownReader.module.css";
-import Script from "next/script";
 
 export default function MarkdownReader({ url, title = "" }) {
     const [content, setContent] = useState(<span>loading...</span>)
