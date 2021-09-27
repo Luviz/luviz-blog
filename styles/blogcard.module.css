@@ -1,10 +1,16 @@
 .card {
     display: grid;
     margin: 1rem 0;
-    grid-template: ". ." 2rem ". title" 1fr ". description" 2fr ". date" 1fr ". ." 1rem / 4rem 1fr 1rem;
+    grid-template:
+        ". ." 3fr
+        ". title" 1fr
+        ". description" 2fr
+        ". date" 1fr
+        ". ." 1fr / 4rem 1fr 1rem;
     max-height: 300px;
     max-width: 600px;
     background-color: #0009;
+    grid-row-gap: 0.5rem;
     opacity: 0.8;
     transition: all 300ms ease-in-out;
     border-radius: 5px;
@@ -16,7 +22,8 @@
 }
 
 .img {
-    grid-row-start: 0/2;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
     height: 300px;
     border-radius: 5px 0 0 5px;
 }
@@ -25,14 +32,15 @@
 .description,
 .date {
     /* background-color: #ccc5; */
-    background: #0008;
+    margin: 0;
+    background: #000e;
     padding: 0.3rem;
     border-radius: 3px;
 }
 
 .title {
     grid-area: title;
-    align-self: center;
+    align-self: end;
 }
 
 .description {
@@ -43,4 +51,31 @@
 .date {
     grid-area: date;
     align-self: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .card {
+        grid-template:
+            "title title" 3fr
+            ". date" 1fr / 1fr 1fr;
+    }
+    .card > .title,
+    .description,
+    .date {
+        margin: 0.2rem 0;
+        overflow-wrap: break-word;
+        z-index: 10;
+    }
+
+    .title {
+        align-self: end;
+    }
+
+    .date {
+        align-self: start;
+    }
+
+    .card > .description {
+        display: none;
+    }
 }
