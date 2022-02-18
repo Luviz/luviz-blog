@@ -1,5 +1,26 @@
 .vast {
   color: lightgrey;
-  border: 1px solid lightblue;
+  /* border: 1px solid lightblue; */
   max-width: 800;
+  display: flex;
+}
+
+.card {
+  padding: 0.25rem;
+  display: flex;
+  font-weight: bold;
+}
+
+.cardName {
+  font-weight: bolder;
+  padding: 0.15rem 0.5rem;
+  margin-right: 1rem;
+}
+
+.cardDir {
+  margin-right: 1rem;
+}
+
+.cardETA > * {
+  margin-right: 1rem;
 }
