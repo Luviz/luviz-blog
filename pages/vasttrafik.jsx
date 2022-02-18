@@ -33,9 +33,11 @@ const getData = async () => {
   const agg = {};
   const getETA = (timestamp) =>
     Math.round((new Date(timestamp) - new Date()) / 1000 / 60);
+
   for (const journey of ret.filter((re) => re.rtTime)) {
     const elem = agg[journey["stopid"]];
     const rtDateTime = `${journey.rtDate}T${journey.rtTime}`;
+
     if (elem) {
       elem.rtTime.push(journey.rtTime);
       elem.rtDate.push(journey.rtDate);
@@ -75,7 +77,7 @@ const useInterval = (callback, delay) => {
 export default function VastTraffic() {
   const [busData, setBusData] = useState({});
   useEffect(() => getData().then(setBusData), [setBusData]);
-  useInterval(() => getData().then(setBusData), 15 * 1000);
+  useInterval(() => getData().then(setBusData), 30 * 1000);
 
   console.log({ busData });
   let cards = <div>aaa</div>;
@@ -101,7 +103,7 @@ const BusCard = ({ card }) => {
       </div>
       <div className={styles.cardDir}> {card.direction.split(",")[0]}</div>
       <div className={styles.cardETA}>
-        <span>{card.ETA[0] > 0 ? card.ETA[0] : "NU"}</span>
+        <span>{card.ETA[0] > 0 ? card.ETA[0] : "Nu"}</span>
         <span>{card.ETA[1] ?? ""}</span>
         <span>{card.ETA[2] ?? ""}</span>
       </div>
