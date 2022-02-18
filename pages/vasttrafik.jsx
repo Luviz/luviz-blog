@@ -101,7 +101,7 @@ const BusCard = ({ card }) => {
       </div>
       <div className={styles.cardDir}> {card.direction.split(",")[0]}</div>
       <div className={styles.cardETA}>
-        <span>{card.ETA[0] >= 0 ? card.ETA[0] : "NU"}</span>
+        <span>{card.ETA[0] > 0 ? card.ETA[0] : "NU"}</span>
         <span>{card.ETA[1] ?? ""}</span>
         <span>{card.ETA[2] ?? ""}</span>
       </div>
