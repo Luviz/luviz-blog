@@ -30,11 +30,13 @@ a {
 
 ::-webkit-scrollbar {
   width: 0.25rem;
+  height: 0.25rem;
+
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  display: none;
+  /* display: none; */
   border-radius: 3px;
   background-color: var(--color-light);
   filter: brightness(1);
