@@ -1,5 +1,6 @@
 import styles from "../styles/vasttrafik.module.css";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 
 const getUrl = (stopId) => {
   const [date, time] = new Date().toISOString().split("T");
@@ -78,34 +79,64 @@ export default function VastTraffic() {
   const [busData, setBusData] = useState({});
   useEffect(() => getData().then(setBusData), [setBusData]);
   useInterval(() => getData().then(setBusData), 30 * 1000);
+  const { query } = useRouter();
 
-  console.log({ busData });
-  let cards = <div>aaa</div>;
+  let cards = <div></div>;
   if (busData) {
-    cards = Object.values(busData).map((b, ix) => (
-      <BusCard key={ix} card={b} />
-    ));
+    let arr = Object.values(busData);
+
+    if (query["debug"]) {
+      arr = [
+        ...Object.values(busData),
+        ...Object.values(busData),
+        ...Object.values(busData),
+      ];
+    }
+
+    cards = arr.map((b, ix) => <BusCard key={ix} card={b} number={ix} />);
   }
-  return <div className={styles.vast}>{cards || "load"}</div>;
+  // console.log("aaa");
+  return (
+    <div className={styles.vast}>
+      <div>
+        <Slider>{[...cards]}</Slider>
+      </div>
+    </div>
+  );
 }
+
+const Slider = ({ children }) => {
+  console.log(children.length, children.length > 1);
+  if (children.length > 4) {
+    return (
+      <div className={styles.slider} style={{ display: "flex" }}>
+        {children}
+      </div>
+    );
+  } else {
+    return <div style={{ display: "flex" }}>{children}</div>;
+  }
+};
 
 const BusCard = ({ card }) => {
   return (
-    <div className={styles.card}>
-      <div
-        className={styles.cardName}
-        style={{
-          backgroundColor: card.bgColor,
-          color: card.fgColor,
-        }}
-      >
-        {card.sname}{" "}
-      </div>
-      <div className={styles.cardDir}> {card.direction.split(",")[0]}</div>
-      <div className={styles.cardETA}>
-        <span>{card.ETA[0] > 0 ? card.ETA[0] : "Nu"}</span>
-        <span>{card.ETA[1] ?? ""}</span>
-        <span>{card.ETA[2] ?? ""}</span>
+    <div>
+      <div className={styles.card}>
+        <div
+          className={styles.cardName}
+          style={{
+            backgroundColor: card.bgColor,
+            color: card.fgColor,
+          }}
+        >
+          {card.sname}
+        </div>
+        <div className={styles.cardDir}> {card.direction.split(",")[0]}</div>
+        <div className={styles.cardETA}>
+          <span>{card.ETA[0] > 0 ? card.ETA[0] : "Nu"}</span>
+          <span>{card.ETA[1] ?? ""}</span>
+          <span>{card.ETA[2] ?? ""}</span>
+        </div>
       </div>
     </div>
   );
