@@ -1,5 +1,4 @@
 import { LocalStorage } from "node-localstorage";
-var localStore = new LocalStorage("./store");
 
 const auth = async () => {
   const url = "https://api.vasttrafik.se:443/token";
@@ -25,20 +24,30 @@ export default async function handler(req, res) {
     data.expires_at = new Date(
       now.getTime() + data.expires_in * 1000
     ).toISOString();
-    localStore.setItem("lastAuth", JSON.stringify(data));
+    if (localStore) {
+      localStore.setItem("lastAuth", JSON.stringify(data));
+    }
+    return data;
   }
 
-  let lastAuth = JSON.parse(localStore.getItem("lastAuth"));
+  try {
+    var localStore = new LocalStorage("./store");
 
-  if (!lastAuth) {
-    await updateAuth();
+    let lastAuth = JSON.parse(localStore.getItem("lastAuth"));
+
+    if (!lastAuth) {
+      await updateAuth();
+      lastAuth = JSON.parse(localStore.getItem("lastAuth"));
+    }
+
+    if (new Date(lastAuth?.expires_at).getTime() < now.getTime()) {
+      await updateAuth();
+    }
+
     lastAuth = JSON.parse(localStore.getItem("lastAuth"));
+    res.status(200).json(lastAuth);
+  } catch {
+    const data = await updateAuth();
+    res.status(200).json(data);
   }
-
-  if (new Date(lastAuth?.expires_at).getTime() < now.getTime()) {
-    await updateAuth();
-  }
-
-  lastAuth = JSON.parse(localStore.getItem("lastAuth"));
-  res.status(200).json(lastAuth);
 }
