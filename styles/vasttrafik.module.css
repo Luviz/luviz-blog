@@ -1,7 +1,9 @@
 .vast {
   color: lightgrey;
-  max-width: 800;
+  max-width: 1200px;
   display: flex;
+  border: 1px saddlebrown solid;
+  overflow: hidden;
 }
 
 .card > * {

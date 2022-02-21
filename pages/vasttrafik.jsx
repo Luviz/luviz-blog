@@ -107,7 +107,7 @@ export default function VastTraffic() {
 
 const Slider = ({ children }) => {
   console.log(children.length, children.length > 1);
-  if (children.length > 4) {
+  if (children.length > 3) {
     return (
       <div className={styles.slider} style={{ display: "flex" }}>
         {children}
