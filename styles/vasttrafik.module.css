@@ -1,8 +1,8 @@
 .vast {
   color: lightgrey;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   display: flex;
-  border: 1px saddlebrown solid;
+  /* border: 1px saddlebrown solid; */
   overflow: hidden;
 }
 
