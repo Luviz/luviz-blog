@@ -76,6 +76,7 @@ const useInterval = (callback, delay) => {
 };
 
 export default function VastTraffic() {
+  console.log("preview");
   const [busData, setBusData] = useState({});
   useEffect(() => getData().then(setBusData), [setBusData]);
   useInterval(() => getData().then(setBusData), 30 * 1000);
