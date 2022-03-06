@@ -1,9 +1,5 @@
 .vast {
   color: lightgrey;
-  /* max-width: 1200px; */
-  display: flex;
-  /* border: 1px saddlebrown solid; */
-  overflow: hidden;
 }
 
 .card > * {
@@ -33,6 +29,25 @@
 
 .cardETA > * {
   margin-right: 1rem;
+}
+
+.fade {
+  position: relative;
+  height: 32px;
+}
+
+.fade > * {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all ease-in-out 250ms;
+}
+
+.fade [data-active="true"] {
+  opacity: 1;
+  transition: all ease-in-out 1s;
 }
 
 .slider {

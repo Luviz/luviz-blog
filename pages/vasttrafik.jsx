@@ -76,6 +76,7 @@ const useInterval = (callback, delay) => {
 };
 
 export default function VastTraffic() {
+  console.log("preview");
   const [busData, setBusData] = useState({});
   useEffect(() => getData().then(setBusData), [setBusData]);
   useInterval(() => getData().then(setBusData), 30 * 1000);
@@ -99,23 +100,37 @@ export default function VastTraffic() {
   return (
     <div className={styles.vast}>
       <div>
-        <Slider>{[...cards]}</Slider>
+        <Fade cards={cards} />
       </div>
     </div>
   );
 }
 
-const Slider = ({ children }) => {
-  console.log(children.length, children.length > 1);
-  if (children.length > 3) {
-    return (
-      <div className={styles.slider} style={{ display: "flex" }}>
-        {children}
-      </div>
-    );
-  } else {
-    return <div style={{ display: "flex" }}>{children}</div>;
+function* chunks(arr, n) {
+  for (let i = 0; i < arr.length; i += n) {
+    yield arr.slice(i, i + n);
   }
+}
+
+const Fade = ({ cards }) => {
+  const [count, setCount] = useState(0);
+  const cardGroups = [...chunks(cards, 3)];
+
+  useInterval(() => {
+    setCount(count + 1);
+  }, 5 * 1000);
+
+  return (
+    <div className={styles.fade}>
+      {cardGroups.map((cardGroup, key) => {
+        return (
+          <div key={key} data-active={key == count % cardGroups.length}>
+            {cardGroup}
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 const BusCard = ({ card }) => {
