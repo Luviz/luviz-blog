@@ -13,8 +13,8 @@ const blogs = [
     },
     {
         href: "blog/azFunc-durOrch",
-        title: "Durable Orchestration a bird’s eye view",
-        description: "The FaaS architecture is quite fascinating. Not due to its simplicity or its rapid development, but because of the way it works when it’s in the cloud. How does an Azure function work in the cloud you ask?",
+        title: "Durable Orchestration a bird's eye view",
+        description: "The FaaS architecture is quite fascinating. Not due to its simplicity or its rapid development, but because of the way it works when it's in the cloud. How does an Azure function work in the cloud you ask?",
         thumbnail: "images/durOrch-thumb.png",
         metadata: "2019-10-23"
     }
