@@ -5,6 +5,7 @@
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-areas: ". logo links .";
     align-items: center;
+    z-index: 2;
 }
 
 .nav ul {
