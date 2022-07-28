@@ -1,0 +1,29 @@
+
+
+.linkCard {
+    background-color: var(--color-light);
+    height: 400px;
+    width: 300px;
+    margin: 1rem 0;
+    border-radius: 5px;
+    transition: ease-in-out 1s;
+}
+
+.text {
+    margin: .5rem;
+    font-weight: bolder;
+    color: var(--color-font)
+}
+
+.image {
+    border-radius: 5px 5px 0 0;
+    filter: blur(3px);
+    justify-items: center;
+    background-color: var(--color-font);
+    transition: ease-in-out 1s;
+
+}
+
+.linkCard:hover .image {
+    filter: blur(0px);
+}
