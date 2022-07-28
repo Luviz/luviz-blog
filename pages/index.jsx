@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import MyApp from './_app'
 import Master from '../components/master'
 
 export default function Home() {

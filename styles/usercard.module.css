@@ -1,0 +1,37 @@
+.userCard {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem;
+}
+
+.name {
+    color: var(--color-font);
+}
+
+.contactContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.svgLinkIcons {
+    fill: var(--color-font);
+    cursor: pointer;
+    transition: ease-in-out 250ms;
+    height: 28px;
+}
+
+
+.svgLinkIcons:hover {
+    fill: var(--color-font-lighter);
+}
+
+
+.image {
+    border-radius: 100%;
+    justify-items: center;
+    border: 5px var(--color-font) solid !important; 
+    background-color: var(--color-font);
+}
