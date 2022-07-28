@@ -1,5 +1,5 @@
 import Master from "../components/master";
-import { UserCard } from "../components/userCard";
+import { UserCard } from "../components/cards/userCard";
 
 export default function About() {
   return (

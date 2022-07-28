@@ -1,9 +1,9 @@
 import Image from "next/image";
-import profilePic from "../public/images/bardiajedi_profile.jpg";
-import styles from "../styles/usercard.module.css";
-import GithubIcon from "./icons/github.svg";
-import LinkedinIcon from "./icons/linkedin.svg";
-import TwitterIcon from "./icons/twitter.svg";
+import profilePic from "../../public/images/bardiajedi_profile.jpg";
+import styles from "../../styles/usercard.module.css";
+import GithubIcon from "../icons/github.svg";
+import LinkedinIcon from "../icons/linkedin.svg";
+import TwitterIcon from "../icons/twitter.svg";
 
 export const UserCard = () => {
   return (
