@@ -134,7 +134,7 @@ As a developer you need to able to utilize all tools at you disposal.
 Whether it's debugging, solution design or raw development, you need to able to analyze, research, hypothesize, theorize and experiment. 
 So don't be afraid to experiment and make sure to ingrain these trait into your jr developer as well. 
 Provide safe and flexible environments that allows for experimentation.
-I personally like the micro service architecture, even if your not working in a micro service environment. 
+I personally like the micro service architecture. Even if your not working in a micro service environment, you can still try to create the locality and simplicity aspect of the micro service architecture. 
 The micro service architecture allows you to quickly plug-in & out services and interchange them with other services. 
 
 Self development, openness and honesty, these traits are the core of any agile project.
