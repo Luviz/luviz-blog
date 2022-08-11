@@ -1,33 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/vs2015.min.css");
 
-.container {
-    color: var(--color-font);
-    max-width: 800px;
-    justify-self: center;
-}
-
 .container img {
     max-width: 100%;
-}
-
-.container blockquote {
-    /* outline: red solid 1px; */
-    margin: 0;
-    padding: 0.3rem 1rem ;
-    border-left: 0.25em solid hsl(0deg 0% 30%);
-}
-
-.container blockquote p {
-    margin-bottom: 0;
-} 
-
-@media only screen and (max-width: 700px) {
-    .container {
-        width: 350px;
-        justify-self: center;
-    }
-    
-    .container img {
-        max-width: 100%;
-    }
 }

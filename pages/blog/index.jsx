@@ -3,14 +3,6 @@ import BlogCard from "../../components/blogCard";
 
 const blogs = [
   {
-    href: "blog/dev-To-Senior-Dev",
-    title: "From Developer To Senior Developer",
-    description:
-      "My thoughts on what a software senior developer should be. A Retrospective on my role as a senior developer.",
-    thumbnail: "images/devTosDev-thumb.png",
-    metadata: "2022-08-??",
-  },
-  {
     href: "blog/azure-func",
     title: "Azure Functions for the Faint of Heart",
     description:
@@ -38,7 +30,7 @@ export default function Blog() {
           alignItems: "center",
         }}
       >
-        {/* <h1>Serverless - Azure functions</h1> */}
+        <h1>Serverless - Azure functions</h1>
         {blogs.map((blog, ix) => (
           <BlogCard key={ix} {...blog} />
         ))}
