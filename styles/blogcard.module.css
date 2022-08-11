@@ -33,7 +33,7 @@
 .date {
     /* background-color: #ccc5; */
     margin: 0;
-    background: #000e;
+    background: hsla(0, 0%, 33%, 85%);
     padding: 0.3rem;
     border-radius: 3px;
 }

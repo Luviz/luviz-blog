@@ -6,7 +6,7 @@ export default function NavBar() {
     const li = [
         { text: "Home", value: "/" },
         { text: "Blog", value: "/blog" },
-        { text: "About", value: "/About" },
+        { text: "About", value: "/about" },
     ].map((l, ix) => <li key={ix}><Link href={l.value} passHref>{l.text}</Link></li>)
 
     return <nav className={styles.nav}>
