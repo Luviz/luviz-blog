@@ -33,28 +33,29 @@ At the core of the solution was a piece of software that I wrote, as mentioned a
 Our team was made out of me, our tech-lead and different project manager from client to client.
 
 ### Mentors vs. Senior Developers
-You maybe asking what is the difference between a mentor and a teacher and a senior dev?
+You may be asking what is the difference between mentor, teacher and a senior dev?
 
 Mentors and senior developers are both teachers, and a senior developer can be a mentor as well.
 
-In my point of view the senior-jr relationship should be closer, they must work on the same project and maybe even on the same tasks.
+In my point of view the senior-junior relationship should be closer.
+They must work on the same project and maybe even on the same tasks.
 The jr dev's work should directly be analyzed by the senior dev and feedbacks and corrections given continuously.
 
 A mentor is a bit more abstract, the tips and tricks you learn from them aren't obvious and you may have to read between the lines.
 They are rarely specific.
 
-> This is mostly due to them not being aware that you consider them a Mentor. 
+> This is mostly due to them not being aware that you consider them a mentor. 
 
-For instance you don't go to your mentor and ask them "What is a good way to retrieve data from a database?" instead they might mention an issue the had with syncing a data with databases and you may ask them to tell you more, and from that you might learn few new things.
+For instance you don't go to your mentor and ask them "What is a good way to retrieve data from a database?" instead they might mention an issue they had with syncing a data with databases and you may ask them to tell you more, and from that you might learn few new things.
 
-In my opinion, having a good senior developer for 6 months is worth having dozens of Mentors. 
+In my opinion, having a good senior developer for 6 months is worth having dozens of mentors. 
 Having the ability to say "Why did you do it that way?", Instead of spending 30 min explaining the problem to someone that has no clue about what you are working on is way more efficient. 
 
 
 ### My transition from dev to senior dev
-As the workload increased, my manager started to recruit some jr developers to start taking over and allowing my to move on to other project. 
+As the workload increased, my manager started to recruit some jr developers to start taking over and allowing me to move on to other project. 
 
-At this time I have around 3 years of experience, although I was extremely good at what I did and observant about everything else around me, like project management, system architectures, solution design and user experience. 
+At this time I have around 3 years of experience, although I was extremely good at what I did and observant about everything else around me, such as project management, system architectures, solution design and user experience. 
 I had zero experience on how to be a senior software developer, in a sense I would have been a better project manager then a senior dev at that time.
 So of course I made some mistakes!
 
@@ -62,7 +63,7 @@ So of course I made some mistakes!
 
 ### Assessment 
 The assessment of a new recruit was one of the most important, and my biggest failure. 
-Although I did not have employ responsibilities my boss recruited people that I recommended. 
+Although I did not have employee responsibilities my boss recruited people that I recommended. 
 So when I said he feels a bit too green and doesn't seem to be following me, and what I'm asking him. That should have been a red flag!  
 But at that time I thought I was so good that I could have turn anyone to a fine software developer. 
 Boy I was so wrong. 
@@ -89,7 +90,7 @@ The slow reading is not a major problem and most of my colleagues know to call m
 
 In my experience a developer under time constraints is more likely to fuck something up over fixing it.
 
-You need to ask your self, what are you trying to get out from the code test.
+You need to ask yourself, what are you trying to get out from the code test?
 Are you trying to figure out how fast the recruit can code or identify problems.
 To me both of the attributes are experience based, and does not tell me anything important.
 
@@ -102,11 +103,10 @@ This format for the assignment allows me to first see how the candidate works in
 And how much experience they have with there own toolbox, and how do they use the toolbox. 
 
 The assessment has no criteria beyond the user stories, so the dev have the creative freedom to do what they like. 
-This removes constraints and allows me to see what technologies they are familiar with. 
-It opens for dialogs that allows me to see, how comfortable with they are with using other technologies.
-What kind of research they done, why the used the tech that they did and etc... 
+This removes constraints and allows me to see and discuss technologies they are familiar with and how comfortable they are with them.
+What kind of research they have done, why the used the tech that they did and etc... 
 
-I like them to turn in the diagnoses before had, so that I may do a code review on it. 
+I like them to turn in the diagnoses before hand, so that I may do a code review on it. 
 I'm interested to see code simplicity vs complexity, how readable the code is, how much comments they have. 
 After my first analysis, I try to find anything that I can refactor. 
 That allows the discussion to open to code quality, where I can see what is important for the candidate. 
@@ -118,10 +118,10 @@ After the review of their code and solution, I usually have everything I need to
 As much as I hate code tests, I think my version of it gives me too much insights to ignore.
 
 ### Developer personality
-One of the first lessons I learned was that people are different, and thereby they learn differently. 
-So I need to change my teaching methods to fit them.
+One of the first lessons I learned was that people are different.
+Thereby they learn differently, so I need to change my teaching methods to fit them.
 
-However there are few traits that I like to create and reinforce in my jr developers, and the are courage, curiosity and experimentation, self development, openness and honesty. 
+However there are few traits that I like to create and reinforce in my jr developers, and they are courage, curiosity and experimentation, self development, openness and honesty. 
 These traits are important to me because in my opinion these trait differentiate between an ok developer from a great developer.
 
 Courage, you cant have developers that are afraid of mistakes. Mistakes are what makes us, it is what allows us to improve and self develop. 
