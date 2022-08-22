@@ -8,7 +8,7 @@ const blogs = [
     description:
       "My thoughts on what a software senior developer should be. A Retrospective on my role as a senior developer.",
     thumbnail: "images/devTosDev-thumb.png",
-    metadata: "2022-08-??",
+    metadata: "2022-08-22",
   },
   {
     href: "blog/azure-func",
