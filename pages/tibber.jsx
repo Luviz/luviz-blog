@@ -1,6 +1,7 @@
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import useLocalStorage from "use-local-storage";
 import { Button, TextField } from "../components/input";
+import { callTibberApi } from "../lib/tibber";
 
 const TibberForm = ({
   onSubmit = undefined,
@@ -61,6 +62,9 @@ const TibberForm = ({
 export default function Tibber() {
   const [errorMessage, setErrorMessage] = useState("");
   const [tibberItems, setTibberItems] = useLocalStorage("tibberKeys", []);
+  // const client = useApolloClient({
+  //   uri: "https://api.tibber.com/v1-beta/gql/",
+  // });
 
   return (
     <div
@@ -68,19 +72,41 @@ export default function Tibber() {
         margin: ".5rem",
       }}
     >
+      {errorMessage && <div style={{ color: "red", margin:"1rem" }}>{errorMessage}</div>}
+      <div>
+        <Button
+          value={"Fetch data"}
+          onClick={async () => {
+            try {
+
+              const promises = tibberItems.map(({ key }) =>
+              callTibberApi(key, { resolution: "DAILY", last: 30 })
+              );
+              const responses = await Promise.all(promises);
+              
+              const responsesData = responses.map(r => r.data);
+              console.log(responsesData);
+              
+              setErrorMessage("")
+            }catch (e){
+              setErrorMessage(e.message);
+            }
+          }}
+        />
+      </div>
       <div style={{ color: "white" }}>Items without key are removed</div>
-      {[...tibberItems, {key:undefined}].map((item, ix) => {
+      {[...tibberItems, { key: undefined }].map((item, ix) => {
         return (
           <TibberForm
-            key={item.key}
+            key={ix}
             defaultValues={{
               label: item.label,
               homeIx: item.homeIx,
               key: item.key,
             }}
             onDelete={() => {
-              const tibberCopy = [...tibberItems]
-              const _ = tibberCopy.splice(ix, 1)
+              const tibberCopy = [...tibberItems];
+              const _ = tibberCopy.splice(ix, 1);
               setTibberItems([]);
               setTibberItems(tibberCopy);
             }}
@@ -96,7 +122,6 @@ export default function Tibber() {
         );
       })}
 
-      {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
     </div>
   );
 }
