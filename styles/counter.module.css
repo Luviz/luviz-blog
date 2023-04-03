@@ -1,0 +1,38 @@
+.root {
+  /* outline: 5px red solid; */
+  /* height: 100%; */
+}
+
+.warning-text {
+  background-color: orange;
+  padding: 1rem 5rem;
+  text-align: center;
+}
+
+.text {
+  color: wheat;
+}
+
+.container {
+  /* background-color: antiquewhite; */
+  display: flex;
+  gap: 1rem;
+  height: 100dvh;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  background-color: cadetblue;
+  font-weight: 600;
+  text-shadow: 0 0 12px #ffffff;
+  padding: 10rem;
+  cursor: pointer;
+}
+
+.button[data-disable=true] {
+  background-color: gray;
+  transition: 200ms ease-in-out background-color;
+
+}
