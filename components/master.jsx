@@ -15,7 +15,7 @@ export default function Master({ children }) {
             <meta name="og:description" content="The blog of Bardia Jedi Software developer" />
             <meta name="image" property="og:image" content="https://bardiajedi.com/images/bjIcon.png" />
             <meta name="image" property="og:image" content="https://preview.bardiajedi.com/images/bjIcon.png" />
-            <html lang="en" />
+            {/* <html lang="en" /> */}
         </Head>
         <NavBar />
         <main className={"main"}>
