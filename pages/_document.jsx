@@ -53,6 +53,7 @@ export default function Document() {
           property="og:image"
           content="https://preview.bardiajedi.com/images/bjIcon.png"
         />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <body>
         <ErrorBoundary>
