@@ -3,11 +3,7 @@ import "react";
 import ErrorBoundary from "./error-boundary";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <ErrorBoundary>
-      <Component {...pageProps} />
-    </ErrorBoundary>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
