@@ -1,5 +1,6 @@
 import Master from "../../components/master";
 import BlogCard from "../../components/blogCard";
+import Head from "next/head";
 
 const blogs = [
   {
@@ -31,6 +32,9 @@ const blogs = [
 export default function Blog() {
   return (
     <Master>
+      <Head>
+        <title>Bardia Jedi - Blog</title>
+      </Head>
       <section
         style={{
           display: "flex",

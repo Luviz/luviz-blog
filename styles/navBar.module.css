@@ -40,12 +40,15 @@
     right: -5px;
 }
 
-.nav a:hover::after {
+.nav li a:hover::after {
     opacity: 1;
 }
 
-.bannerIcon {
+.bannerIconLink {
     grid-area: logo;
+}
+
+.bannerIcon {
     height: 1.5rem;
     align-items: center;
     transition: transform 500ms ease-in-out;
@@ -83,7 +86,7 @@
 
     .bannerIcon {
         grid-area: unset;
-        /* position: absolute; */
+        position: absolute;
         top: 1rem;
         left: 0.5rem;
     }
