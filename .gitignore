@@ -36,3 +36,9 @@ yarn-error.log*
 # local store
 .env
 store/*
+
+# PWA
+
+public/sw.js
+public/worker-*.js
+public/workbox-*.js
